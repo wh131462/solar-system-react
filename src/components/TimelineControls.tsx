@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useApp } from '../store/AppContext';
 
 const SPEEDS = [0.1, 0.5, 1, 2, 5, 10, 30, 100, 365];

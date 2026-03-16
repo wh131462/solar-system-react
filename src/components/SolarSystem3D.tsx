@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
+import { useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { PLANETS } from '../data/planets';
@@ -306,7 +306,7 @@ const SolarSystem3D = forwardRef<SolarSystemHandle>((_props, ref) => {
       // Gravity lines
       if (st.showGravity && gravityLines.length === 0) createGravLines();
       if (!st.showGravity && gravityLines.length > 0) clearGravLines();
-      gravityLines.forEach(g => { const a = g.line.geometry.attributes.position.array as Float32Array; a[0] = a[1] = a[2] = 0; const w = new THREE.Vector3(); meshes[g.idx].getWorldPosition(w); a[3] = w.x; a[4] = w.y; a[5] = w.z; g.line.geometry.attributes.position.needsUpdate = true; g.line.material.opacity = Math.min(.4, 20 / w.length()); });
+      gravityLines.forEach(g => { const a = g.line.geometry.attributes.position.array as Float32Array; a[0] = a[1] = a[2] = 0; const w = new THREE.Vector3(); meshes[g.idx].getWorldPosition(w); a[3] = w.x; a[4] = w.y; a[5] = w.z; g.line.geometry.attributes.position.needsUpdate = true; (g.line.material as THREE.Material).opacity = Math.min(.4, 20 / w.length()); });
 
       meshes[0].scale.setScalar(st.realisticScale ? .5 * (1 + Math.sin(elapsed * 1.5) * .01) : 1 + Math.sin(elapsed * 1.5) * .01);
 

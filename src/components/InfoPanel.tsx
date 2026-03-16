@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PLANETS } from '../data/planets';
 import { useApp } from '../store/AppContext';
 import type { InfoTab } from '../store/AppContext';

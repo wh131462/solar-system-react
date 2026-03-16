@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AppProvider, useApp } from './store/AppContext';
 import TopBar from './components/TopBar';
 import Sidebar from './components/Sidebar';
@@ -14,7 +14,7 @@ import Toast from './components/Toast';
 import './styles/global.css';
 
 function AppContent() {
-  const { state, dispatch, sceneRef } = useApp();
+  const { dispatch, sceneRef } = useApp();
   const [achOpen, setAchOpen] = useState(false);
 
   useEffect(() => {

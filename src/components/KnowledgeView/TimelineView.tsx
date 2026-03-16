@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TIMELINE_EVENTS } from '../../data/timeline';
 import { PLANETS } from '../../data/planets';
 import { useApp } from '../../store/AppContext';

@@ -1,4 +1,5 @@
-import React from 'react';
+
+
 import * as THREE from 'three';
 import { PLANETS } from '../data/planets';
 import { Icons } from '../data/icons';
