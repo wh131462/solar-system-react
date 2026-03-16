@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 深空背景 -->
+  <circle cx="32" cy="32" r="32" fill="#080C18"/>
+  <!-- 太阳光晕 -->
+  <circle cx="32" cy="32" r="14" fill="#FF8C00" opacity="0.15"/>
+  <circle cx="32" cy="32" r="10" fill="#FFA500" opacity="0.25"/>
+  <!-- 太阳 -->
+  <circle cx="32" cy="32" r="7" fill="#FFD700"/>
+  <circle cx="32" cy="32" r="7" fill="url(#sunGrad)"/>
+  <!-- 轨道环 -->
+  <ellipse cx="32" cy="32" rx="18" ry="6" fill="none" stroke="rgba(100,180,255,0.25)" stroke-width="0.6" transform="rotate(-20 32 32)"/>
+  <ellipse cx="32" cy="32" rx="25" ry="9" fill="none" stroke="rgba(100,180,255,0.15)" stroke-width="0.5" transform="rotate(-20 32 32)"/>
+  <!-- 行星 (土星风格，带光环) -->
+  <g transform="rotate(-20 32 32)">
+    <ellipse cx="46" cy="29.5" rx="5.5" ry="1.2" fill="none" stroke="#B8860B" stroke-width="0.8" opacity="0.7"/>
+    <circle cx="46" cy="29.5" r="3" fill="#DAA520"/>
+    <circle cx="46" cy="29.5" r="3" fill="url(#planetGrad)"/>
+    <!-- 光环前半部分覆盖 -->
+    <ellipse cx="46" cy="29.5" rx="5.5" ry="1.2" fill="none" stroke="#B8860B" stroke-width="0.8" opacity="0.7" stroke-dasharray="0 17.3 17.3"/>
+  </g>
+  <!-- 小行星/地球 -->
+  <g transform="rotate(-20 32 32)">
+    <circle cx="22" cy="35" r="2" fill="#4A90D9"/>
+    <circle cx="22" cy="35" r="2" fill="url(#earthGrad)"/>
+  </g>
+  <!-- 星星点缀 -->
+  <circle cx="8" cy="10" r="0.7" fill="#fff" opacity="0.8"/>
+  <circle cx="54" cy="8" r="0.5" fill="#fff" opacity="0.6"/>
+  <circle cx="12" cy="52" r="0.6" fill="#fff" opacity="0.7"/>
+  <circle cx="56" cy="48" r="0.5" fill="#fff" opacity="0.5"/>
+  <circle cx="48" cy="56" r="0.7" fill="#fff" opacity="0.6"/>
+  <circle cx="6" cy="30" r="0.4" fill="#fff" opacity="0.5"/>
+  <circle cx="58" cy="26" r="0.4" fill="#fff" opacity="0.4"/>
+  <defs>
+    <radialGradient id="sunGrad" cx="40%" cy="40%">
+      <stop offset="0%" stop-color="#FFF8DC" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planetGrad" cx="35%" cy="35%">
+      <stop offset="0%" stop-color="#FFE4B5" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#DAA520" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="earthGrad" cx="35%" cy="35%">
+      <stop offset="0%" stop-color="#87CEEB" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4A90D9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
