@@ -298,7 +298,7 @@ const SolarSystem3D = forwardRef<SolarSystemHandle>((_props, ref) => {
       });
 
       // Rotate Earth clouds slowly
-      if (!st.paused) { cloudMeshes.forEach(cm => { cm.rotation.y += 0.0003 * st.simSpeed; }); }
+      if (!st.paused) { cloudMeshes.forEach(cm => { cm.rotation.y += 0.01 * 0.85 * st.simSpeed; }); }
 
       // Trail visibility
       Object.values(trailLines).forEach(t2 => { t2.line.visible = st.showTrails; });
